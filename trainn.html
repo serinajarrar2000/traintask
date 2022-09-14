@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: rgba(223, 240, 245, 0.911);
+  padding: 10px;
+  text-align: left;
+  font-size: 2px;
+  color: white;
+}
+
+nav {
+float: left;
+
+  width: 10%;
+  height: 550px; 
+  background: rgb(144, 144, 235);
+  padding: 50px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 90%;
+  text-align:center;
+  height:220px ;
+  background-color: rgb(212, 212, 107);
+  height: 300px;
+  Display:felx ; /* only for demonstration, should be removed */
+}
+b {
+  float: left;
+ padding:10px;
+  width: 90%;
+  height:1px ;
+  background-color: white
+  
+}
+a {
+  float: left;
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  height:230px ;
+  background-color: rgb(182, 117, 43);
+  /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+</style>
+<script>
+     var line=0;
+     function addfunction(){
+        var x=document.querySelector("#testout");
+        x.innerHTML=x.innerHTML+"<div>count" +line+"</div>";
+        line++;     }
+        function clearr(){
+            var x=document.querySelector("#testout");
+            x.innerHTML="";
+        }
+</script>
+</head>
+<body>
+
+
+
+<div class="sub-header">
+    <div>
+<button onclick="addfunction()">add content</button></div>
+<div class="sub" id="testout">Text</div>
+<button onclick="clearr()" >remove content</button></div>
+
+    
+
+
+<section>
+  <nav>
+  <h3>
+    <br><br><br><br><br><br><br><br><br><br>Left section</h3>
+  </nav>
+  
+  <article>
+   <h3 >
+    <br><br><br><br><br><br>
+    main content</h3>
+  </article>
+  <b>
+ 
+  </b>
+  <a>
+    <h3 >
+        <br><br><br><br>
+        main content</h3>
+  </a>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
